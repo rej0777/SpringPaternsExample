@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<title> Select Atributes</title>
+</head>
+<body>
+
+<h1>wybur atrybutów to your plant?</h1>
+<form action="#" th:action="@{/addplant}" method="get"> 
+
+<div th:each= "component : ${components}">
+	<input type="checkbox" th:name="${component}"/> <span th:utext="${component}"> Components </span>
+</div>
+
+<button name="submit" type="submit" value="0"> Submit </button>
+ </form>
+
+</body>
+</html>
